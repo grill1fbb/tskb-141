@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-#define INCH 2.5
+
 
 /**
  * @brief Вычисляет площать квадрата с заданной стороной
@@ -41,6 +41,7 @@ double getDouble()
 
 double CmToInch(const double cm)
 {
+    const double INCH = 2.5;
     return cm/INCH;
 }
 

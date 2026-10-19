@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#define inch 2.5
 
 /**
  * @brief Вычисляет площать квадрата с заданной стороной
@@ -20,6 +22,7 @@ double getDouble();
  */
 int main()
 {
+    printf("Введите занчение: ");
     double cm = getDouble();
     printf("Length in inches is %lf\n",s(cm));
     return 0;
@@ -27,7 +30,7 @@ int main()
 
 double s(const double cm)
 {
-    return cm/2.5;
+    return cm/inch;
 }
 
 double getDouble()

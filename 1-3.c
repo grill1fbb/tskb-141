@@ -20,7 +20,9 @@ double getDouble();
  */
 int main()
 {
+    printf("Введите значение х: ");
     double x = getDouble();
+    printf("Введите значение k: ");
 	double k = getDouble();
     printf("Energy is %lf\n",s(x,k));
     return 0;

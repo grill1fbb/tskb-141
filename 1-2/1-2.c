@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#define inch 2.5
+
+#define INCH 2.5
 
 /**
  * @brief Вычисляет площать квадрата с заданной стороной
  * @param side сторона квадрата
  * @return Рассчитанное значение
  */
-double s(const double cm);
+double CmToInch(const double cm);
 
 /**
  * @brief Считывает с клавиатуры занчение с плавающей точкой
@@ -24,18 +25,23 @@ int main()
 {
     printf("Введите занчение: ");
     double cm = getDouble();
-    printf("Length in inches is %lf\n",s(cm));
+    printf("Length in inches is %lf\n",CmToInch(cm));
     return 0;
-}
-
-double s(const double cm)
-{
-    return cm/inch;
 }
 
 double getDouble()
 {
-    double value = 0.0;
-    scanf("%lf",&value);
+    double value = 0;
+    if(scanf("%lf",&value) != 1){
+        printf("Обшика: неверный ввод");
+        exit(1);
+    }
     return value;
 }
+
+double CmToInch(const double cm)
+{
+    return cm/INCH;
+}
+
+

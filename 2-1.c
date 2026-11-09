@@ -5,7 +5,7 @@
 double s(const double side);
 
 /**
-* Считывает число с плавающей точкой
+* Считывает число с плавающей точкоq
 */
 double getDouble();
 

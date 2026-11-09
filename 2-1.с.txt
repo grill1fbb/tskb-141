@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+
+/**
+* @brief Вычисляет площадь грани куба
+* @param side Длина ребра куба
+* @return Площадь грани
+*/
+double s(const double side);
+
+/**
+* @brief Считывает с клавиатуры число с плавающей точкой
+* @return Считанное значение
+*/
+double getDouble();
+
+/**
+* @brief Точка входа в программу
+* @return 0, если программа выполнена корректно
+*/
+int main()
+{
+double a = getDouble();
+
+printf("Площадь грани: %lf\n", s(a));
+printf("площадь полной поверхности: %lf\n", 6 * s(a));
+printf("обьем: %lf\n", a * a * a);
+
+return 0;
+}
+
+double s(const double side)
+{
+return side * side;
+}
+
+double getDouble()
+{
+double value = 0.0;
+scanf("%lf", &value);
+return value;
+}

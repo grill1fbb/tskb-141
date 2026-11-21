@@ -54,7 +54,7 @@ const double c = GetPositiveValue("третью сторону");
 
 if (!can_build_triangle(a, b, c)) {
 printf("Треугольник с такими сторонами построить нельзя.\n");
-return 0;
+return 1;
 }
 
 printf("Треугольник построить можно.\n");

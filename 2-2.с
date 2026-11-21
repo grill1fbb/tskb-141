@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+double GetValidValue();
+
+double calc_y(const double a, const double x);
+
+int main() {
+const double a = 0.3;
+
+printf("Введите x: ");
+const double x = GetValidValue();
+
+printf("y = %.6f\n", calc_y(a, x));
+
+return 0;
+}
+
+double GetValidValue() {
+double value = 0.0;
+
+if (scanf("%lf", &value) != 1) {
+printf("Ошибка: нужно ввести число.\n");
+exit(1);
+}
+
+return value;
+}
+
+double calc_y(const double a, const double x) {
+if (a * x < 1.0) {
+return a * sin((x * x + 1.0) / 10.0);
+}
+
+return a * cos((x - 1.0) / 10.0);
+}
